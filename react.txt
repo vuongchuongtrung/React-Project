@@ -1,0 +1,44 @@
+Intro to React.js - Simple Weather Web App
+______________________________________________________________________________________________________
+Installation of tools - THIS IS ALREADY DONE ON THE LAB MACHINES:
+● Download and install heroku's command line tools - https://toolbelt.heroku.com/
+● Download and install github's command line tools - https://git-scm.com/downloads -
+https://help.github.com/articles/set-up-git/#setting-up-git
+● Download and install Node .js (please make sure to select LTS and not Current) -
+https://nodejs.org/en/download/
+● Download and install Atom text editor (https://atom.io/)
+______________________________________________________________________________________________________
+BEFORE STARTING:
+Students will still need to set these environment variables at the start:
+set http_proxy=http://193.1.120.28:80
+set https_proxy=http://193.1.120.28:80
+set path=c:\Program Files\nodejs;c:\program files\heroku\bin;c:\Program Files\Git\bin
+And the working directory for npm is %appdata%\npm
+______________________________________________________________________________________________________
+● Create Heroku account (primary development language = 'I use another language') -
+https://signup.heroku.com/
+● Open the command line (Windows shell) and execute the below commands:
+______________________________________________________________________________________________________
+______________________________________________________________________________________________________
+1. Setup heroku, type:
+❏ heroku (it will ask for login: enter email and password for your Heroku account)
+2. Create a react app using create-react-app
+❏ cd %appdata%\npm
+❏ npm install -g create-react-app
+❏ create-react-app follow-the-weather-sara (use your name!)
+❏ cd follow-the-weather-sara (use your name!)
+3. Run the app locally
+❏ npm start (opens the app on http://localhost:3000/)
+______________________________________________________________________________________________________
+4. OPTIONAL: Turn that react app into a heroku project
+❏ git init
+❏ heroku create it-tallaght-test --buildpack
+https://github.com/mars/create-react-app-buildpack.git
+5. OPTIONAL: Send the heroku project to heroku’s servers and view it online
+❏ git add .
+❏ git commit -m “created a react app”
+❏ git push heroku master
+❏ heroku open
+______________________________________________________________________________________________________
+After this, your browser should open your React application looking like this:
+If you visit https://dashboard.heroku.com/apps , you should see your application listed here:
