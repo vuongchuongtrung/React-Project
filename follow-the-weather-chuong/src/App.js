@@ -10,7 +10,7 @@ import './App.css';
 const App = React.createClass({
   getInitialState() {
     return {
-      selectedPlace: 'test'
+      selectedPlace: ''
     }
   },
 
