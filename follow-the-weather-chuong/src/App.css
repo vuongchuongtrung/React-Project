@@ -28,9 +28,18 @@
   padding: 15px 20px;
 }
 
-/*
+.weather-content table {
+  left: 10%;
+  position: relative;
+  width: 80%;
+}
+
+.weather-content h2 {
+  color: darkgrey;
+}
+
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-*/
