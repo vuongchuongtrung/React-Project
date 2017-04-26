@@ -3,16 +3,24 @@ import React, { Component } from 'react';
 import sun from './sun.png';
 import common from './constants/Common';
 import PlacesNav from './PlacesNav';
+import WeatherContent from './WeatherContent';
+
 import './App.css';
 
-class App extends Component {
+const App = React.createClass({
+  getInitialState() {
+    return {
+      selectedPlace: 'test'
+    }
+  },
+
   onPlaceClick(text) {
     //console.log('onPlaceClick: ', text)
     console.log(this)
     this.setState({
       selectedPlace: text
     })
-  }
+  },
 
   render() {
     return (
@@ -23,11 +31,10 @@ class App extends Component {
         </div>
 
         <PlacesNav onPlaceClick={this.onPlaceClick.bind(this)} />
-
-        <div className="wheather-content" />
+        <WeatherContent placeName={this.state.selectedPlace} />
       </div>
     );
   }
-}
+})
 
 export default App;
