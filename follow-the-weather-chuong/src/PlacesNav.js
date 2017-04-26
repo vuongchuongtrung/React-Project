@@ -2,18 +2,18 @@ import React, { Component } from 'react';
 import places from './constants/Places';
 
 class PlacesNav extends Component {
-  onClick(text) {
+  onClick(value) {
     //console.log(text);
-    this.props.onPlaceClick(text);
+    this.props.onPlaceClick(value);
   }
 
   renderPlaces() {
     var elements = [];
     for (var p in places) {
       //console.log(p);
-      const{text} = places[p];
+      const{text, value} = places[p];
       elements.push(
-        <h2 onClick={this.onClick.bind(this,text)}>
+        <h2 onClick={this.onClick.bind(this, value)}>
           {text}
         </h2>
       );
